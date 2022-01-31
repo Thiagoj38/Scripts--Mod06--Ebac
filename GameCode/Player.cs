@@ -7,19 +7,11 @@ public class Player : MonoBehaviour
     public GameObject projectile;
     public Transform shootPoint;
     public Vector3 dir;
-
     public PoolManager poolManager;
-
     public bool canMove = false;
-
-    //public MeshRenderer meshRenderer;
-
     public int deathNumber = 0;
 
-    /*public void ChangeColor(Color c)
-    {
-        meshRenderer.material.SetColor("_Color", c);
-    }*/
+    
 
     public void OnDestroy()
     {

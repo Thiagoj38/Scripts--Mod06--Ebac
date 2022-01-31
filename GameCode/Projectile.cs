@@ -31,14 +31,16 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == tagToLook)
-        {
-            Destroy(collision.gameObject);
-            OnHitTarget?.Invoke();
+        if (collision.gameObject)
+        {            
+            //OnHitTarget?.Invoke();
             FinishUsage();
-
         }
-    }
+        else
+        {
+            StartProjectile();
+        }
+    }      
 
 
 }
