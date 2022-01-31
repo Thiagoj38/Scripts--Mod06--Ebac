@@ -26,12 +26,11 @@ public class PoolManager : MonoBehaviour
         {
             if (!pooledObjects[i].activeInHierarchy)
             {
-                return pooledObjects[i]; 
-                
+                return pooledObjects[i];                
             }
 
-        }
-            
+        }            
+        
         return null;
     }
 

@@ -5,11 +5,11 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public Vector3 dir;
-    public float timeToReset = 8f;
+    public float timeToReset = 5f;
 
     public string tagToLook = "Enemy";
 
-    public Action OnHitTarget;
+    //public Action OnHitTarget;
 
     void Update()
     {
@@ -26,7 +26,7 @@ public class Projectile : MonoBehaviour
     private void FinishUsage()
     {
         gameObject.SetActive(false);
-        OnHitTarget = null;
+        //OnHitTarget = null;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -36,10 +36,7 @@ public class Projectile : MonoBehaviour
             //OnHitTarget?.Invoke();
             FinishUsage();
         }
-        else
-        {
-            StartProjectile();
-        }
+                
     }      
 
 

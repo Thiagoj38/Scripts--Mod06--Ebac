@@ -13,10 +13,7 @@ public class Player : MonoBehaviour
 
     
 
-    public void OnDestroy()
-    {
-        Destroy(gameObject);
-    }
+    
 
     void Update()
     {
@@ -42,7 +39,7 @@ public class Player : MonoBehaviour
 
         obj.SetActive(true);
         obj.GetComponent<Projectile>().StartProjectile();
-        obj.GetComponent<Projectile>().OnHitTarget = CountDeaths;
+        
 
         obj.transform.SetParent(null);
         obj.transform.position = shootPoint.transform.position;
@@ -50,10 +47,6 @@ public class Player : MonoBehaviour
         
     }
 
-    private void CountDeaths()
-    {
-        deathNumber++;
-        Debug.Log("NumberOfDeaths = " + deathNumber);
-    }
+    
 }
 
