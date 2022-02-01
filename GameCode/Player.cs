@@ -36,6 +36,9 @@ public class Player : MonoBehaviour
     private void SpawnObject()
     {
         var obj = poolManager.GetPooledObject();
+        if (obj == null) return;
+       
+        
 
         obj.SetActive(true);
         obj.GetComponent<Projectile>().StartProjectile();

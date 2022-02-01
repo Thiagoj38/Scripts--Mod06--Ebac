@@ -9,7 +9,6 @@ public class Projectile : MonoBehaviour
 
     public string tagToLook = "Enemy";
 
-    //public Action OnHitTarget;
 
     void Update()
     {
@@ -26,14 +25,13 @@ public class Projectile : MonoBehaviour
     private void FinishUsage()
     {
         gameObject.SetActive(false);
-        //OnHitTarget = null;
+        CancelInvoke();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject)
         {            
-            //OnHitTarget?.Invoke();
             FinishUsage();
         }
                 
